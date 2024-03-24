@@ -40,7 +40,7 @@ def main():
         verify = int(randint(1, 50))
         okvai = int(input(f"Enter {verify} to continue: "))
         if okvai == verify:
-            print("\nChoose the string session type: \n1. STRANGER HELLBOT \n2. Telethon \n3. Pyrogram \n4. Instagram")
+            print("\nChoose the string session type: \n1. STRANGERHELLBOT \n2. Telethon \n3. Pyrogram \n4. Instagram")
             while True:
                 library = input("\nYour Choice: ")
                 if library == "1":
@@ -82,7 +82,7 @@ def generate_pyro_session():
     APP_ID = int(input("\nEnter APP ID here: "))
     API_HASH = input("\nEnter API HASH here: ")
     with PClient(name="helluser", api_id=APP_ID, api_hash=API_HASH, in_memory=True) as hellbot:
-        print("\nYour SAIFBOT Session Is sent in your Telegram Saved Messages.")
+        print("\nYour STRANGERBOT Session Is sent in your Telegram Saved Messages.")
         hellbot.send_message(
             "me",
             f"#STRANGERBOT #PYROGRAM\n\n`{hellbot.export_session_string()}`",
@@ -90,7 +90,7 @@ def generate_pyro_session():
 
 
 def generate_telethon_session():
-    print("\nTelethon Session For STRANGERBOT!")
+    print("\nTelethon Session For SAIFBOT!")
     APP_ID = int(input("\nEnter APP ID here: "))
     API_HASH = input("\nEnter API HASH here: ")
     with TelegramClient(StringSession(), APP_ID, API_HASH) as hellbot:
@@ -151,7 +151,7 @@ def hellbot_session(session):
         5: "91.108.56.130",
     }
 
-    error_msg = "Error in generating session! Report it in Saif Chats"
+    error_msg = "Error in generating session! Report it in Stranger Chats"
 
     # converting pyrogram session
     if len(session) in pyro_format.keys():
@@ -179,3 +179,6 @@ def hellbot_session(session):
         return f"=={hellbot('hell')}{new_session}{hellbot('bot')}=="
     else:
         return error_msg
+
+
+main()
