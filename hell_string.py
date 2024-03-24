@@ -90,7 +90,7 @@ def generate_pyro_session():
 
 
 def generate_telethon_session():
-    print("\nTelethon Session For SAIFBOT!")
+    print("\nTelethon Session For STRANGERBOT!")
     APP_ID = int(input("\nEnter APP ID here: "))
     API_HASH = input("\nEnter API HASH here: ")
     with TelegramClient(StringSession(), APP_ID, API_HASH) as hellbot:
